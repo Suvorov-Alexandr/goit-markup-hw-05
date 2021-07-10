@@ -108,23 +108,11 @@ body {
 .mail {
   margin-right: 10px;
   fill: currentColor;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--cubic);
 }
 
 .tel {
   margin-right: 10px;
   fill: currentColor;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--cubic);
-}
-
-.mail:hover {
-  fill: var(--accent-color);
-}
-
-.tel:hover {
-  fill: var(--accent-color);
 }
 
 .logo {
@@ -139,11 +127,6 @@ body {
   transition-timing-function: var(--cubic);
 }
 
-.logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-}
-
 /* Site nav */
 
 .site-nav .link {
@@ -153,6 +136,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
+  transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -182,6 +166,7 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -444,6 +429,7 @@ body {
   width: 44px;
   height: 44px;
   fill: var(--icon-color);
+  transition-property: background-color, fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -478,6 +464,7 @@ body {
   fill: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition-property: border-color, fill  ;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -514,16 +501,9 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   display: block;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--cubic);
 }
 
 .colortext {
-  color: var(--accent-color);
-}
-
-.footer-logo:hover,
-.footer-logo:focus {
   color: var(--accent-color);
 }
 
@@ -535,6 +515,7 @@ body {
   color: var(--primary-white-color);
   font-style: normal;
   line-height: 1.71;
+  transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -548,6 +529,7 @@ body {
   font-style: normal;
   line-height: 1.71;
   color: var(--footer-address);
+  transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -588,6 +570,7 @@ body {
   height: 44px;
   fill: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: ;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -619,6 +602,7 @@ body {
   border-color: transparent;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-property: background-color, box-shadow, color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
 }
@@ -675,7 +659,6 @@ body {
 .card.link:hover,
 .card.link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  display: block;
 }
 
 .project-box {
@@ -687,6 +670,9 @@ body {
 
 .card.link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .project-card-group {
@@ -739,16 +725,24 @@ body {
   background-color: var(--primary-white-color);
 }
 
-.icon-close {
+.close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  fill: black;
   background-color: transparent;
   cursor: pointer;
   padding: 6px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-close {
+  fill: black;
 }
 
 .is-hidden {
